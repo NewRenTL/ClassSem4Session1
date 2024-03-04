@@ -1,0 +1,40 @@
+
+
+/*Styles1*/
+
+:root 
+{
+    --variable1: rgb(120,230,40);
+}
+
+*
+{
+    margin:0;
+    padding:0;
+}
+
+.box1
+{
+    --variableheredada: rgb(216, 20, 223);
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    background-color: var(--variable1);
+    /* Añadimos posición relativa para utilizar posición absoluta en la caja interna */
+    position: relative;
+}
+
+.box1 .box1CajaDeDentro
+{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    /*Posicionamos nuestra caja dentro de la caja en la que esta contenida*/
+    top: 30%;
+    left: 30%;
+    /*Posicion absoluta para poder mover la caja de de dentro con top y left*/
+    position: absolute;
+    /*Uso la variable que definimos en la etiqueta padre con clase "box1"*/
+    background-color: var(--variableheredada);
+}
+

@@ -1,0 +1,35 @@
+
+:root
+{
+    /*--(Nombre_De_La_Variable):(Valor)*/
+    --variable1: rgb(159,0,255)
+    /*Red:159 Green:0 Blue:255*/
+}
+
+
+
+/*Clase Padre*/
+.box1
+{
+    --variableHeredada: rgb(240,120,90);
+    /*Variable que guarda la clase Padre*/
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: var(--variable1);
+    border: 10px solid rgb(120,120,120);   
+}
+
+
+.box1 .box1CajaDeDentro
+{
+    /*La variable que tiene la clase padre puede ser usada en clases Hijas*/
+    height: 100px;
+    width: 100px;
+    background-color: var(--variableHeredada);
+    /*Margin*/
+    margin-top: 30%;
+    margin-left: 30%;
+    border: 10px solid rgb(120,9,120);
+}
+
